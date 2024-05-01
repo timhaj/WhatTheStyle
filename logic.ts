@@ -39,6 +39,13 @@ function check(element: any): void {
         info.setAttribute("id", "win");
         info.innerHTML = "You're correct!";
         containerDiv.replaceChild(info, containerDiv.childNodes[2]);
+        let a: any = document.createElement("a");
+        a.setAttribute("href", "/");
+        info = document.createElement("button");
+        info.setAttribute("id", "btn");
+        info.innerHTML = "NEW GAME";
+        a.appendChild(info);
+        containerDiv.appendChild(a);
     }
     else {
         info = document.createElement("p");

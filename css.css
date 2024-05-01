@@ -45,10 +45,18 @@ body {
 
 #win {
     font-size: 24px;
-    color: #B5BDA5;
+    color: #a5b38a;
 }
 
 #incorrect {
     font-size: 24px;
     color: #9c7570;
+}
+
+#btn {
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #dde0e4;
+    border-width: 2px;
 }
