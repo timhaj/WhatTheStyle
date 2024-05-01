@@ -74,7 +74,7 @@ function handle(selected: HTMLParagraphElement): void {
             element.innerHTML = "You're correct!";
             container.replaceChild(element, container.childNodes[2]);
             let a: HTMLAnchorElement = document.createElement("a");
-            a.setAttribute("href", "/font.html");
+            a.setAttribute("href", "/WhatTheStyle/font.html");
             element = document.createElement("button");
             element.setAttribute("id", "btn");
             element.innerHTML = "NEW GAME";

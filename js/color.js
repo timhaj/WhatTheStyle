@@ -45,7 +45,7 @@ function check(element) {
             info.innerHTML = "You're correct!";
             containerDiv.replaceChild(info, containerDiv.childNodes[2]);
             let a = document.createElement("a");
-            a.setAttribute("href", "/color.html");
+            a.setAttribute("href", "/WhatTheStyle/color.html");
             info = document.createElement("button");
             info.setAttribute("id", "btn");
             info.innerHTML = "NEW GAME";
