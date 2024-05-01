@@ -45,7 +45,7 @@ function check(element) {
             info.innerHTML = "You're correct!";
             containerDiv.replaceChild(info, containerDiv.childNodes[2]);
             let a = document.createElement("a");
-            a.setAttribute("href", "/");
+            a.setAttribute("href", "/color.html");
             info = document.createElement("button");
             info.setAttribute("id", "btn");
             info.innerHTML = "NEW GAME";
@@ -68,7 +68,7 @@ function generateRandomColors() {
     let arr = [];
     let randomColor = "#";
     for (let i = 0; i < 5; i++) {
-        for (let i = 0; i < 6; i++) {
+        for (let j = 0; j < 6; j++) {
             randomColor += available[Math.floor(Math.random() * available.length)];
         }
         arr[i] = randomColor;

@@ -71,7 +71,7 @@ function generateRandomColors(): string[] {
     let arr: string[] = [];
     let randomColor: string = "#";
     for (let i: number = 0; i < 5; i++) {
-        for (let i: number = 0; i < 6; i++) {
+        for (let j: number = 0; j < 6; j++) {
             randomColor += available[Math.floor(Math.random() * available.length)]
         }
         arr[i] = randomColor;
