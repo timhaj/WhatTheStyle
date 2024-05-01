@@ -61,7 +61,7 @@ document.body.appendChild(container);
 
 function handle(selected: any): void {
     let selectedFont: string = selected.style.fontFamily;
-    if (selectedFont == guessingFonts[fontToGuess]) {
+    if (selectedFont == guessingFonts[fontToGuess] || selectedFont.substring(1, selectedFont.length - 1) == guessingFonts[fontToGuess]) {
         if (!gameWin) {
             for (let i: number = 0; i < fontDiv.children.length; i++) {
                 let child: any = fontDiv.children[i];
