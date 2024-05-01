@@ -14,7 +14,8 @@ body {
     align-items: center;
 }
 
-.colorContainer {
+.colorContainer,
+.fontContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -29,10 +30,18 @@ body {
     margin: 5px;
 }
 
+.font {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+    font-size: 24px;
+}
+
 #guessingColor,
 #text,
 #win,
-#incorrect {
+#incorrect,
+#guessingFont {
     font-size: 32px;
     font-family: sans-serif;
     font-weight: bold;
