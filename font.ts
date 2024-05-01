@@ -74,7 +74,7 @@ function handle(selected: any): void {
             element.innerHTML = "You're correct!";
             container.replaceChild(element, container.childNodes[2]);
             let a: any = document.createElement("a");
-            a.setAttribute("href", "/");
+            a.setAttribute("href", "/font.html");
             element = document.createElement("button");
             element.setAttribute("id", "btn");
             element.innerHTML = "NEW GAME";
