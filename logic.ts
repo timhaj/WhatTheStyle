@@ -35,6 +35,12 @@ function check(element: any): void {
     let B: string = parseInt(barve[2], 10).toString(16).toUpperCase().padStart(2, "0");
     let hex: string = "#" + R + G + B;
     if (hex == colors[guess]) {
+        for (let i: number = 0; i < colorDiv.children.length; i++) {
+            let child: any = colorDiv.children[i];
+            if (child !== element) {
+                child.style.backgroundColor = 'transparent';
+            }
+        }
         info = document.createElement("p");
         info.setAttribute("id", "win");
         info.innerHTML = "You're correct!";
@@ -48,9 +54,10 @@ function check(element: any): void {
         containerDiv.appendChild(a);
     }
     else {
+        element.style.backgroundColor = "transparent";
         info = document.createElement("p");
         info.setAttribute("id", "incorrect");
-        info.innerHTML = "Incorrect, that color was: " + hex;
+        info.innerHTML = "Incorrect, that color was: <span style=\"color:" + hex + "\">" + hex + "</span>";
         containerDiv.replaceChild(info, containerDiv.childNodes[2]);
     }
 }
