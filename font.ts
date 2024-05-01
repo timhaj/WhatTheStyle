@@ -1,4 +1,4 @@
-let container: any = document.createElement("div");
+let container: HTMLDivElement = document.createElement("div");
 container.setAttribute("class", "container");
 let fontToGuess: number = Math.floor(Math.random() * 5);
 
@@ -34,16 +34,16 @@ let fonts: string[] = [
 
 let guessingFonts: string[] = generateRandomFonts();
 let gameWin: boolean = false;
-let element: any = document.createElement("p");
+let element: HTMLParagraphElement | HTMLButtonElement = document.createElement("p");
 element.setAttribute("id", "guessingFont");
 element.innerHTML = guessingFonts[fontToGuess];
 container.appendChild(element);
 
-let fontDiv: any = document.createElement("div");
+let fontDiv: HTMLDivElement = document.createElement("div");
 fontDiv.setAttribute("class", "fontContainer");
 
 for (let i = 0; i < 5; i++) {
-    let text: any = document.createElement("p");
+    let text: HTMLParagraphElement = document.createElement("p");
     text.setAttribute("class", "font");
     text.innerHTML = "Sample";
     text.style.fontFamily = guessingFonts[i];
@@ -59,7 +59,7 @@ element.innerHTML = "Guess the correct font";
 container.appendChild(element);
 document.body.appendChild(container);
 
-function handle(selected: any): void {
+function handle(selected: HTMLParagraphElement): void {
     let selectedFont: string = selected.style.fontFamily;
     if (selectedFont == guessingFonts[fontToGuess] || selectedFont.substring(1, selectedFont.length - 1) == guessingFonts[fontToGuess]) {
         if (!gameWin) {
@@ -73,7 +73,7 @@ function handle(selected: any): void {
             element.setAttribute("id", "win");
             element.innerHTML = "You're correct!";
             container.replaceChild(element, container.childNodes[2]);
-            let a: any = document.createElement("a");
+            let a: HTMLAnchorElement = document.createElement("a");
             a.setAttribute("href", "/font.html");
             element = document.createElement("button");
             element.setAttribute("id", "btn");

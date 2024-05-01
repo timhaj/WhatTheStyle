@@ -1,19 +1,19 @@
-let containerDiv: any = document.createElement("div");
+let containerDiv: HTMLDivElement = document.createElement("div");
 containerDiv.setAttribute("class", "container");
 let guess: number = Math.floor(Math.random() * 5);
 let available: string[] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
 let colors: string[] = generateRandomColors();
 let flag: boolean = false;
-let info: any = document.createElement("p");
+let info: HTMLParagraphElement | HTMLButtonElement = document.createElement("p");
 info.setAttribute("id", "guessingColor");
 info.innerHTML = colors[guess];
 containerDiv.appendChild(info);
 
-let colorDiv: any = document.createElement("div");
+let colorDiv: HTMLDivElement = document.createElement("div");
 colorDiv.setAttribute("class", "colorContainer");
 
 for (let i = 0; i < 5; i++) {
-    let circleDiv: any = document.createElement("div");
+    let circleDiv: HTMLDivElement = document.createElement("div");
     circleDiv.setAttribute("class", "circle");
     circleDiv.style.backgroundColor = colors[i];
     circleDiv.addEventListener("click", () => {
@@ -28,7 +28,7 @@ info.innerHTML = "Guess the correct color";
 containerDiv.appendChild(info);
 document.body.appendChild(containerDiv);
 
-function check(element: any): void {
+function check(element: HTMLDivElement): void {
     let barve: string[] = element.style.backgroundColor.substring(4, element.style.backgroundColor.length - 1).split(",");
     let R: string = parseInt(barve[0], 10).toString(16).toUpperCase().padStart(2, "0");
     let G: string = parseInt(barve[1], 10).toString(16).toUpperCase().padStart(2, "0");
@@ -46,7 +46,7 @@ function check(element: any): void {
             info.setAttribute("id", "win");
             info.innerHTML = "You're correct!";
             containerDiv.replaceChild(info, containerDiv.childNodes[2]);
-            let a: any = document.createElement("a");
+            let a: HTMLAnchorElement = document.createElement("a");
             a.setAttribute("href", "/color.html");
             info = document.createElement("button");
             info.setAttribute("id", "btn");
