@@ -28,9 +28,27 @@ body {
     margin: 5px;
 }
 
-#guessingColor {
+#guessingColor,
+#text,
+#win,
+#incorrect {
     font-size: 32px;
     font-family: sans-serif;
     font-weight: bold;
     color: #5c5d67;
+}
+
+#text {
+    font-size: 20px;
+    font-variant: small-caps;
+}
+
+#win {
+    font-size: 24px;
+    color: #B5BDA5;
+}
+
+#incorrect {
+    font-size: 24px;
+    color: #9c7570;
 }
