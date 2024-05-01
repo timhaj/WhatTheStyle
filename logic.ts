@@ -57,7 +57,7 @@ function check(element: any): void {
         }
     }
     else {
-        if (!flag) {
+        if (!flag && element.style.backgroundColor != "transparent") {
             element.style.backgroundColor = "transparent";
             info = document.createElement("p");
             info.setAttribute("id", "incorrect");
