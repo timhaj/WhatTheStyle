@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What the style?1</title>
+    <link rel="stylesheet" href="css.css">
+    <title>What the style?!</title>
 </head>
 <body>
-    ello
+    <div class="main">
+        <div class="block">
+            <a href="/color.html">
+                <div class="content">
+                    <p class="selection">Guess the color</p>
+                    <div class="circle" id="krogec"></div>
+                </div>
+            </a>
+        </div>
+        <div class="block">
+            <a href="/font.html">
+                <div class="content">
+                    <p class="selection">Guess the font</p>
+                    <p class="font" id="tekstovniElement">Sample</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script>
+        let color = "#";
+        let available = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
+        let fonts = [
+    "Arial",
+    "Verdana",
+    "Georgia",
+    "Times New Roman",
+    "Courier New",
+    "Tahoma",
+    "Helvetica",
+    "Courier",
+    "Arial Black",
+    "Comic Sans MS",
+    "Trebuched MS",
+    "Garamond",
+    "Courier New",
+    "Brush Script MT",
+    "Luminari",
+    "Bradley Hand",
+    "Monaco",
+    "Lucida",
+    "Baskerville",
+    "Palatino",
+    "Gill Sans",
+    "Impact",
+    "Calibri",
+    "Cambria",
+    "Candara",
+    "Century Gothic",
+    "Consolas",
+];
+        for (let i = 0; i < 6; i++) {
+            color += available[Math.floor(Math.random() * available.length)]
+        }
+        document.getElementById("krogec").style.backgroundColor = color;
+        document.getElementById("tekstovniElement").style.fontFamily = fonts[Math.floor(Math.random() * fonts.length)];
+    </script>
 </body>
 </html>
