@@ -70,7 +70,7 @@ function handle(selected) {
             element.innerHTML = "You're correct!";
             container.replaceChild(element, container.childNodes[2]);
             let a = document.createElement("a");
-            a.setAttribute("href", "/WhatTheStyle/font.html");
+            a.setAttribute("href", "https://timhaj.github.io/WhatTheStyle/font.html");
             element = document.createElement("button");
             element.setAttribute("id", "btn");
             element.innerHTML = "NEW GAME";
