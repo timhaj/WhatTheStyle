@@ -96,13 +96,14 @@ function handle(selected: any): void {
 
 function generateRandomFonts(): string[] {
     let arr: string[] = [];
-    for (let i: number = 0; arr.length < 5; i++) {
+    for (let i: number = 0; arr.length < 5;) {
         let selected: string = fonts[Math.floor(Math.random() * fonts.length)];
         if (arr.indexOf(selected) >= 0) {
             continue;
         }
         else {
             arr[i] = selected;
+            i++;
         }
     }
     return arr;

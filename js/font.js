@@ -91,13 +91,14 @@ function handle(selected) {
 }
 function generateRandomFonts() {
     let arr = [];
-    for (let i = 0; arr.length < 5; i++) {
+    for (let i = 0; arr.length < 5;) {
         let selected = fonts[Math.floor(Math.random() * fonts.length)];
         if (arr.indexOf(selected) >= 0) {
             continue;
         }
         else {
             arr[i] = selected;
+            i++;
         }
     }
     return arr;
