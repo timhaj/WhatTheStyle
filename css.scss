@@ -1,0 +1,106 @@
+$primary-color: #5c5d67;
+$win-color: #a5b38a;
+$incorrect-color: #9c7570;
+$bigText: 32px;
+$medText: 24px;
+$smallText: 20px;
+
+%centering {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin size-adjustment($size: 100%) {
+    width: $size;
+    height: $size;
+}
+
+html,
+body {
+    @include size-adjustment;
+    margin: 0;
+}
+
+.container {
+    @include size-adjustment;
+    @extend %centering;
+    flex-direction: column;
+}
+
+.colorContainer,
+.fontContainer {
+    @extend %centering;
+}
+
+.circle {
+    @include size-adjustment($size: 75px);
+    border-radius: 50%;
+    background-color: #000;
+    margin: 5px;
+}
+
+.font {
+    margin: 0px 10px 0px 10px;
+    font-size: $medText;
+}
+
+#guessingColor,
+#text,
+#win,
+#incorrect,
+#guessingFont {
+    font: bold $bigText sans-serif;
+    color: $primary-color;
+}
+
+#text {
+    font-size: $smallText;
+    font-variant: small-caps;
+}
+
+#win {
+    font-size: $medText;
+    color: $win-color;
+}
+
+#incorrect {
+    font-size: $medText;
+    color: $incorrect-color;
+}
+
+#btn {
+    padding: 15px;
+    font-size: $smallText;
+    border-radius: 5px;
+    background-color: #dde0e4;
+    border-width: 2px;
+}
+
+.main {
+    @include size-adjustment;
+    @extend %centering;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+}
+
+.selection {
+    font: small-caps bold $bigText sans-serif;
+    color: $primary-color;
+}
+
+.content {
+    @include size-adjustment;
+    @extend %centering;
+    flex-direction: column;
+    padding: 0px 10px 0px 10px;
+}
+
+.content:hover {
+    border: black 2px solid;
+    border-radius: 5px;
+}
